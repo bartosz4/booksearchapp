@@ -6,27 +6,58 @@ import BookList from './BookList';
 
 
 class App extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
             books: [],
             searchWord: '',
-            per: 3,
-            page: 0
+            per: 6,
+            page: 0,
+            loadingState: false
         }
     }
-    handleSubmit = (e) => {
-        // e.preventDefault();   zrobić coś z tym
 
-        const {books, searchWord, per, page} = this.state;
+    componentDidMount() {
+        this.refs.iScroll.addEventListener("scroll", () => {
+            if (this.refs.iScroll.scrollTop + this.refs.iScroll.clientHeight >= this.refs.iScroll.scrollHeight -100){
+                this.loadMoreBooks();
+            }
+        });
+    }
+
+    loadBooks = (e) => {
+        e.preventDefault();
+
+        const {searchWord, per, page} = this.state;
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchWord}&maxResults=${per}&startIndex=${page}`)
             .then(data => data.json())
             .then(data => {
                 console.log(data);
                 this.setState({
-                    books: [...books, ...data.items]
+                    books: [...data.items]
                 })
             })
+    }
+
+    loadMoreBooks = () =>{
+        this.setState({
+            loadingState: true
+        });
+        setTimeout(() => {
+            this.setState({
+                page: this.state.page + 6,
+                loadingState: false
+            });
+            const {books, searchWord, per, page} = this.state;
+            fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchWord}&maxResults=${per}&startIndex=${page}`)
+                .then(data => data.json())
+                .then(data => {
+                    console.log(data);
+                    this.setState({
+                        books: [...books, ...data.items]
+                    })
+                })
+        }, 1000);
     }
 
     handleChange =(e) =>{
@@ -35,20 +66,17 @@ class App extends Component {
         })
     }
 
-    loadMore = () => {
-        this.setState(prevState => ({
-            page: prevState.page +3
-        }), this.handleSubmit)
-    }
-
     render() {
         return (
             <div className="App">
-                <div>
+                <div className="vc"
+                     ref="iScroll"
+                     style={{ height: "100vh", overflow: "auto" }}
+                >
                     <Nav/>
-                    <SearchArea handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+                    <SearchArea loadBooks={this.loadBooks} handleChange={this.handleChange}/>
                     <BookList books={this.state.books}/>
-                    <a onClick={this.loadMore}>Load More</a>
+
                 </div>
 
             </div>
