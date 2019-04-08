@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/bartosz4/booksearchapp/precache-manifest.0e77ddf84a4a0487d966dd66f06bcc53.js"
+  "/booksearchapp/precache-manifest.76d1476ee4f5b0427f7037f83c521b60.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/bartosz4/booksearchapp/index.html", {
+workbox.routing.registerNavigationRoute("/booksearchapp/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

@@ -1,13 +1,13 @@
 {
-  "main.css": "/bartosz4/booksearchapp/static/css/main.07318036.chunk.css",
-  "main.js": "/bartosz4/booksearchapp/static/js/main.215a1852.chunk.js",
-  "main.js.map": "/bartosz4/booksearchapp/static/js/main.215a1852.chunk.js.map",
-  "runtime~main.js": "/bartosz4/booksearchapp/static/js/runtime~main.7a764750.js",
-  "runtime~main.js.map": "/bartosz4/booksearchapp/static/js/runtime~main.7a764750.js.map",
-  "static/js/2.164617b5.chunk.js": "/bartosz4/booksearchapp/static/js/2.164617b5.chunk.js",
-  "static/js/2.164617b5.chunk.js.map": "/bartosz4/booksearchapp/static/js/2.164617b5.chunk.js.map",
-  "index.html": "/bartosz4/booksearchapp/index.html",
-  "precache-manifest.0e77ddf84a4a0487d966dd66f06bcc53.js": "/bartosz4/booksearchapp/precache-manifest.0e77ddf84a4a0487d966dd66f06bcc53.js",
-  "service-worker.js": "/bartosz4/booksearchapp/service-worker.js",
-  "static/css/main.07318036.chunk.css.map": "/bartosz4/booksearchapp/static/css/main.07318036.chunk.css.map"
+  "main.css": "/booksearchapp/static/css/main.07318036.chunk.css",
+  "main.js": "/booksearchapp/static/js/main.f5cce0c1.chunk.js",
+  "main.js.map": "/booksearchapp/static/js/main.f5cce0c1.chunk.js.map",
+  "runtime~main.js": "/booksearchapp/static/js/runtime~main.b57c4caf.js",
+  "runtime~main.js.map": "/booksearchapp/static/js/runtime~main.b57c4caf.js.map",
+  "static/js/2.164617b5.chunk.js": "/booksearchapp/static/js/2.164617b5.chunk.js",
+  "static/js/2.164617b5.chunk.js.map": "/booksearchapp/static/js/2.164617b5.chunk.js.map",
+  "index.html": "/booksearchapp/index.html",
+  "precache-manifest.76d1476ee4f5b0427f7037f83c521b60.js": "/booksearchapp/precache-manifest.76d1476ee4f5b0427f7037f83c521b60.js",
+  "service-worker.js": "/booksearchapp/service-worker.js",
+  "static/css/main.07318036.chunk.css.map": "/booksearchapp/static/css/main.07318036.chunk.css.map"
 }
